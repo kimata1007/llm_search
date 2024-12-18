@@ -20,3 +20,4 @@ RUN git config --global user.name $GIT_UNAME
 RUN git config --global user.email $GIT_EMAIL
 
 CMD [ "zsh" ]
+
