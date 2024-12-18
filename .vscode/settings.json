@@ -1,0 +1,16 @@
+{
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.organizeImports": "always"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff",
+    },
+    "ruff.format.args": [
+        "--config=pyproject.toml",
+    ],
+    "mypy-type-checker.args": [
+        "--config=pyproject.toml"
+    ],
+}
