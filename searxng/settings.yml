@@ -1,0 +1,22 @@
+use_defalut_settings: true
+server:
+    secret_key: "4b658b7b79f8d17696b18cbae43d7edd039ea91531785a1878761e25829cc0ef"  # 必須
+    port: 8080
+    public_instance: true
+    image_proxy: true
+
+ui:
+    default_locale: "jp"
+    results_on_new_tab: false
+
+search:
+    safe_search: 0
+    autocomplete: "google"
+    formats:
+        - html
+        - json
+
+engines:
+  - name: google
+    engine: google
+    disabled: false        # 有効化

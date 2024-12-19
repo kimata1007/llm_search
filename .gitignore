@@ -1,2 +1,4 @@
 .env
 access_token.txt
+data/
+results/

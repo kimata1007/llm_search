@@ -7,7 +7,7 @@ ENV GIT_EMAIL muquanchunda@gmail.com
 
 RUN apt-get update && apt-get install -y vim zsh git ssh sudo tmux
 RUN python -m pip install --upgrade pip
-RUN python -m pip install numpy pandas tqdm ipykernel jsonlines==4.0.0 openai python-dotenv==1.0.1 langchain==0.2.0 langchain-openai langchain_community
+RUN python -m pip install numpy pandas tqdm ipykernel jsonlines==4.0.0 openai python-dotenv==1.0.1 langchain==0.2.0 langchain-openai langchain_community toml pipreqs bs4
 
 RUN useradd -u $LOCAL_UID $LOCAL_UNAME
 # shをzshに変更

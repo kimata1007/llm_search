@@ -1,0 +1,28 @@
+version: '3'
+services:
+  searxng:
+    image: searxng/searxng:latest
+    container_name: searxng
+    ports:
+      - "8080:8080"
+    networks:
+      - app
+    # environment:
+    #   - SEARXNG_BASE_URL=http://searxng:8080
+    # volumes:
+    #   - ./searxng/settings.yml:/etc/searxng/settings.yml:rw
+  
+  llm_search:
+    image: kimata2090/llm_search:latest
+    ports:
+      - "5000:5000"
+    networks:
+      - app
+    depends_on:
+      - searxng
+    environment:
+      - SEARXNG_URL=http://searxng:8080
+  
+networks:
+  app:
+    driver: bridge
